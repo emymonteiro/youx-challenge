@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "incremental": false,
     "skipLibCheck": true,
+    "allowJs": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noUnusedLocals": true,
