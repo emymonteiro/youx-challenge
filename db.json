@@ -98,6 +98,15 @@
       "height": "",
       "state": "SE",
       "id": 11
+    },
+    {
+      "name": "Guilherme",
+      "cpf": "213.123.123-13",
+      "date": "2011-06-30",
+      "weight": "70",
+      "height": "1.80",
+      "state": "MS",
+      "id": 12
     }
   ],
   "staffs": [

@@ -147,12 +147,14 @@ export default {
       const res = await axios.get('patients')
       if (res.data.some(e => e.cpf === this.inputs.cpf)) {
         this.errorMSG = 'Já existe um usuário cadastrado com esse CPF.'
+        this.resetForm()
         return
       }
 
       axios.post('patients', data)
         .then((res) => {
           this.resetForm(true)
+          this.$router.push('/register')
         }).catch(() => {
           this.errorMSG = 'Ocorreu algum erro inexperado.'
           this.resetForm()
