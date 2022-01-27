@@ -4,8 +4,10 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CarbonWarning: typeof import('~icons/carbon/warning')['default']
     Header: typeof import('./components/Header.vue')['default']
+    'Mdi:alertCircleOutline': typeof import('~icons/mdi/alert-circle-outline')['default']
+    'Mdi:arrowLeft': typeof import('~icons/mdi/arrow-left')['default']
+    'Mdi:check': typeof import('~icons/mdi/check')['default']
   }
 }
 

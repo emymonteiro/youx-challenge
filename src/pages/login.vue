@@ -66,7 +66,8 @@
 <script>
 
 import { maska } from 'maska'
-import axios from 'axios'
+import axios, { Axios } from 'axios'
+import sha256 from 'crypto-js/sha256'
 
 export default {
   directives: { maska },
@@ -106,8 +107,11 @@ export default {
       for (const each in this.inputs)
         data[each] = this.inputs[each]
 
-      const res = await axios.get(`staffs?name=${this.inputs.name}&cpf=${this.inputs.cpf}&password=${this.inputs.password}`)
-      if (!res.data.some(e => e.cpf === this.inputs.cpf)) {
+      const cpf = sha256(this.inputs.cpf)
+      const password = sha256(this.inputs.password + this.inputs.name)
+
+      const res = await axios.get(`staffs?name=${this.inputs.name}&cpf=${cpf}&password=${password}`)
+      if (!res.data.some(e => e.cpf === `${cpf}`)) {
         this.resetForm()
         this.errorMSG = 'Registro não encontrado.'
         return

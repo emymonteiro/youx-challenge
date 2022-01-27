@@ -1,121 +1,29 @@
 {
   "patients": [
     {
-      "id": 1,
-      "name": "Emilly",
-      "cpf": "057.055.011-45",
+      "name": "Emilly Monteiro",
+      "cpf": "16cf548f5b6a7f5f3518358a5ed8f764797e3b185183073041445524c247d458",
       "date": "1997-08-25",
       "weight": "70",
       "height": "1.75",
-      "state": "MS"
-    },
-    {
-      "name": "emyzinha",
-      "cpf": "057.055.011-45",
-      "date": "2022-01-20",
-      "weight": "55",
-      "height": "0.58",
-      "state": "PR",
-      "id": 2
-    },
-    {
-      "name": "emyzinha",
-      "cpf": "213.12",
-      "date": "",
-      "weight": "",
-      "height": "",
-      "state": "SP",
-      "id": 3
-    },
-    {
-      "name": "emyziinha",
-      "cpf": "213.123.123-12",
-      "date": "",
-      "weight": "",
-      "height": "",
-      "state": "RJ",
-      "id": 4
-    },
-    {
-      "name": "emyzinha",
-      "cpf": "057.055.011-45",
-      "date": "",
-      "weight": "",
-      "height": "",
       "state": "MS",
-      "id": 5
-    },
-    {
-      "name": "emyzinha",
-      "cpf": "057.055.011-45",
-      "date": "",
-      "weight": "",
-      "height": "",
-      "state": "RJ",
-      "id": 6
-    },
-    {
-      "name": "emyzinha",
-      "cpf": "057.055.011-45",
-      "date": "",
-      "weight": "",
-      "height": "",
-      "state": "SP",
-      "id": 7
-    },
-    {
-      "name": "emyzinha",
-      "cpf": "057.055.011-45",
-      "date": "",
-      "weight": "",
-      "height": "",
-      "state": "SP",
-      "id": 8
-    },
-    {
-      "name": "emyzinha",
-      "cpf": "057.055.011-45",
-      "date": "",
-      "weight": "",
-      "height": "",
-      "state": "SP",
-      "id": 9
-    },
-    {
-      "name": "emyzinha",
-      "cpf": "057.055.011-45",
-      "date": "",
-      "weight": "",
-      "height": "",
-      "state": "SP",
-      "id": 10
-    },
-    {
-      "name": "emyzinha",
-      "cpf": "057.055.011-45",
-      "date": "",
-      "weight": "",
-      "height": "",
-      "state": "SE",
-      "id": 11
-    },
-    {
-      "name": "Guilherme",
-      "cpf": "213.123.123-13",
-      "date": "2011-06-30",
-      "weight": "70",
-      "height": "1.80",
-      "state": "MS",
-      "id": 12
+      "id": 1
     }
   ],
   "staffs": [
     {
-      "id": 1,
-      "name": "Emilly",
-      "cpf": "057.055.011-45",
-      "password": "123456",
-      "function": "medico"
+      "name": "admin",
+      "cpf": "a68ad65994d4c6ec32db1c19be586ae8971ae969db842a289607f9c3dd2f627f",
+      "password": "dbe9787aaf4002c6662e490b3f1f7512807459b6dee2e1c2e56738e1cbbd993c",
+      "function": "medico",
+      "id": 1
+    },
+    {
+      "name": "Emilly Monteiro",
+      "cpf": "16cf548f5b6a7f5f3518358a5ed8f764797e3b185183073041445524c247d458",
+      "password": "d2328765150f818625314f163496db7d7315ec12e7661f1d17f1d050b4df9b6d",
+      "function": "enfermeiro",
+      "id": 2
     }
   ]
 }

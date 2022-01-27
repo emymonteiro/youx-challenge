@@ -1,5 +1,9 @@
 <template>
-  <h1 class="text-gray-400 font-bold pt-10 p-5 text-2em">
+  <router-link to="/" class="hover:opacity-70 cursor-pointer mt-10 flex items-center ml-15 text-gray-400 justify-self-end self-start">
+    <mdi:arrow-left class="mr-2" />
+    Voltar ao inicio
+  </router-link>
+  <h1 class="text-gray-400 p-5  font-bold text-2em">
     Registrar Paciente
   </h1>
   <form class="flex flex-col text-left w-[80%] pb-5 mt-5 space-y-5">
@@ -98,6 +102,7 @@
 <script>
 import { maska } from 'maska'
 import axios from 'axios'
+import sha256 from 'crypto-js/sha256'
 
 export default {
   directives: {
@@ -124,7 +129,6 @@ export default {
     }
   },
   async created() {
-  // GET request using fetch with async/await
     const response = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
     const data = await response.json()
     this.store = data
@@ -153,8 +157,10 @@ export default {
       for (const each in this.inputs)
         data[each] = this.inputs[each]
 
+      data.cpf = `${sha256(data.cpf)}`
+
       const res = await axios.get('patients')
-      if (res.data.some(e => e.cpf === this.inputs.cpf)) {
+      if (res.data.some(e => e.cpf === data.cpf)) {
         this.errorMSG = 'Já existe um usuário cadastrado com esse CPF.'
         this.resetForm()
         return
@@ -163,7 +169,7 @@ export default {
       axios.post('patients', data)
         .then((res) => {
           this.resetForm(true)
-          // this.$router.push('/register')
+          this.$router.push('/done')
         }).catch(() => {
           this.errorMSG = 'Ocorreu algum erro inexperado.'
           this.resetForm()

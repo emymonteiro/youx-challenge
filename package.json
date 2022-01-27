@@ -4,7 +4,6 @@
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
     "start": "concurrently \"json-server --watch ./db.json --port 3000\" \"vite --port 4000\"",
-    "start-auth": "concurrently \"node server.js\" \"vite --port 4000\"",
     "lint": "eslint \"**/*.{vue,ts,js}\"",
     "preview": "vite preview",
     "preview-https": "serve dist",
@@ -19,6 +18,7 @@
     "axios": "^0.25.0",
     "body-parser": "^1.19.1",
     "concurrently": "^7.0.0",
+    "crypto-js": "^4.1.1",
     "json-server": "^0.17.0",
     "jsonwebtoken": "^8.5.1",
     "maska": "^1.5.0",
@@ -26,6 +26,7 @@
     "pinia": "^2.0.9",
     "prism-theme-vars": "^0.2.2",
     "vue": "^3.2.29",
+    "vue-crypt": "^1.0.0",
     "vue-demi": "^0.12.1",
     "vue-i18n": "^9.1.9",
     "vue-router": "^4.0.12"
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.16.0",
     "@iconify-json/carbon": "^1.0.14",
+    "@iconify-json/mdi": "^1.0.12",
     "@intlify/vite-plugin-vue-i18n": "^3.2.1",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/nprogress": "^0.2.0",
