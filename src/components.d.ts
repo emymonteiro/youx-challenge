@@ -5,9 +5,13 @@
 declare module 'vue' {
   export interface GlobalComponents {
     Header: typeof import('./components/Header.vue')['default']
-    'Mdi:alertCircleOutline': typeof import('~icons/mdi/alert-circle-outline')['default']
+    LoginForm: typeof import('./components/LoginForm.vue')['default']
+    Map: typeof import('./components/Map.vue')['default']
     'Mdi:arrowLeft': typeof import('~icons/mdi/arrow-left')['default']
-    'Mdi:check': typeof import('~icons/mdi/check')['default']
+    NurseForm: typeof import('./components/NurseForm.vue')['default']
+    PatientsForm: typeof import('./components/PatientsForm.vue')['default']
+    RegisterButtons: typeof import('./components/RegisterButtons.vue')['default']
+    RegistersHeader: typeof import('./components/RegistersHeader.vue')['default']
   }
 }
 

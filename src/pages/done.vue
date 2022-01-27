@@ -1,3 +1,4 @@
+<!-- Pagina de redirecionamento em caso de registro completo -->
 <template>
   <div class="flex space-y-10 flex-col items-center justify-center font-bold uppercase p-10 text-gray-600">
     <mdi:check class="w-15 h-15 text-green-700" />

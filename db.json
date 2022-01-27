@@ -8,6 +8,33 @@
       "height": "1.75",
       "state": "MS",
       "id": 1
+    },
+    {
+      "name": "Guilherme Serra",
+      "cpf": "e94c58b119a421474f9b6f821d087bd5e395dfd8ac81e7f8fa6090b5a6840209",
+      "date": "1999-04-15",
+      "weight": "105",
+      "height": "1.80",
+      "state": "MS",
+      "id": 2
+    },
+    {
+      "name": "Erick Menezes",
+      "cpf": "458f8bb1b4c19b42401924043318e1d09c390fcaa28cb6b080778903c5f2f61d",
+      "date": "1995-06-22",
+      "weight": "80",
+      "height": "1.70",
+      "state": "BA",
+      "id": 3
+    },
+    {
+      "name": "Emilly",
+      "cpf": "99b47465fcd54f9fc602b59142d2043ed143a36706e34a36d82e73ec9a59737f",
+      "date": "2022-01-14",
+      "weight": "55",
+      "height": "0.58",
+      "state": "SP",
+      "id": 4
     }
   ],
   "staffs": [

@@ -1,3 +1,4 @@
+<!-- Pagina para erro de Diretorio -- ( Em caso de página inexistente ) -->
 <template>
   <div class="flex space-y-10 flex-col items-center justify-center font-bold uppercase p-10 text-gray-600">
     <mdi:alert-circle-outline class="w-15 h-15 text-red-700" />
