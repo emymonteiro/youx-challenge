@@ -3,12 +3,17 @@
   <!-- <input v-maska="'###.###.###-##'"> -->
 </template>
 
-<script lang="ts">
+<script>
 
 import { maska } from 'maska'
 
 export default {
   directives: { maska },
+  mounted() {
+    const user = localStorage.getItem('user-info')
+    if (!user)
+      this.$router.push('/login')
+  },
 }
 </script>
 

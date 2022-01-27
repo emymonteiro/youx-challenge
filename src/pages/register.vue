@@ -129,8 +129,17 @@ export default {
     const data = await response.json()
     this.store = data
   },
+  mounted() {
+    const user = localStorage.getItem('user-info')
+    if (!user)
+      this.$router.push('/')
+  },
   methods: {
     async handleSubmit() {
+      const user = localStorage.getItem('user-info')
+      if (!user)
+        this.$router.push('/')
+
       await this.emptyRules()
       for (const each in this.empty)
         if (this.empty[each]) return
@@ -154,7 +163,7 @@ export default {
       axios.post('patients', data)
         .then((res) => {
           this.resetForm(true)
-          this.$router.push('/register')
+          // this.$router.push('/register')
         }).catch(() => {
           this.errorMSG = 'Ocorreu algum erro inexperado.'
           this.resetForm()

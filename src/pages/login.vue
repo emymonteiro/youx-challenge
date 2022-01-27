@@ -86,6 +86,11 @@ export default {
       },
     }
   },
+  mounted() {
+    const user = localStorage.getItem('user-info')
+    if (user)
+      this.$router.push('/')
+  },
   methods: {
     async handleSubmit() {
       await this.emptyRules()
@@ -101,10 +106,17 @@ export default {
       for (const each in this.inputs)
         data[each] = this.inputs[each]
 
-      const res = await axios.get('staffs')
+      const res = await axios.get(`staffs?name=${this.inputs.name}&cpf=${this.inputs.cpf}&password=${this.inputs.password}`)
       if (!res.data.some(e => e.cpf === this.inputs.cpf)) {
         this.resetForm()
-        this.errorMSG = 'Não existe nenhum registro CPF.'
+        this.errorMSG = 'Registro não encontrado.'
+        return
+      }
+
+      if (res.status === 200 && res.data.length > 0) {
+        this.resetForm(false, true)
+        localStorage.setItem('user-info', JSON.stringify(res.data[0]))
+        this.$router.push('/')
       }
     },
     emptyRules() {
@@ -120,6 +132,7 @@ export default {
       this.errorMSG = msg ? '' : this.errorMSG
       this.validCPF = true
     },
+
   },
 }
 </script>

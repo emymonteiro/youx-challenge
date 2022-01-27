@@ -16,16 +16,58 @@
         </p>
       </div>
     </div>
-    <div class="space-x-15 mr-[20%] font-bold">
-      <router-link class="cursor-pointer" hover="opacity-70" to="/">
-        Entrar
-      </router-link>
-      <router-link class="cursor-pointer" hover="opacity-70" to="/register">
-        Registrar-se
-      </router-link>
+    <div v-if="user" class="flex items-center mr-[10%] font-bold">
+      <p class="text-gray-500">
+        Nome: <span class="text-youx ml-5 capitalize">{{ user.name }}</span>
+      </p>
+      <p class="ml-10 text-gray-500">
+        Cargo: <span class="text-youx ml-5 capitalize">{{ user.position }}</span>
+      </p>
+      <p class="cursor-pointer ml-20 text-gray-500" @click="userLeave()">
+        Sair
+      </p>
     </div>
   </main>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      user: undefined,
+    }
+  },
+  watch: {
+    $route(to, from) {
+      const user = JSON.parse(localStorage.getItem('user-info'))
+      if (user) {
+        this.user = {
+          name: user.name,
+          position: user.function,
+        }
+      }
+      else {
+        this.user = undefined
+      }
+    },
+  },
+  mounted() {
+    const user = JSON.parse(localStorage.getItem('user-info'))
+    if (user) {
+      this.user = {
+        name: user.name,
+        position: user.function,
+      }
+    }
+  },
+  methods: {
+    userLeave() {
+      localStorage.clear()
+      this.$router.push('/login')
+    },
+  },
+}
+</script>
 
 <style scoped>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
