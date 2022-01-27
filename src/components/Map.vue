@@ -395,7 +395,7 @@ export default {
 </script>
 
 <style scoped>
-#svg-map path { fill:#0094d9 }
+    #svg-map path { fill:#0094d9 }
     #svg-map text { fill:#fff; font:12px Arial-BoldMT, sans-serif; cursor:pointer }
     #svg-map a{ text-decoration:none }
     #svg-map a:hover { cursor:pointer; text-decoration:none }

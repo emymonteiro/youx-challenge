@@ -1,6 +1,6 @@
 <template>
   <main class="flex bg-white items-center shadow p-6 text-youx justify-between">
-    <div class="ml-[20%] flex flex-col">
+    <div class="cursor-pointer ml-[20%] flex flex-col" @click="goHome()">
       <div class="tipFont relative flex items-center whitespace-nowrap">
         <h1 class=" whitespace-nowrap text-2.4em font-bold">
           YOU
@@ -64,6 +64,9 @@ export default {
     userLeave() {
       localStorage.clear()
       this.$router.push('/login')
+    },
+    goHome() {
+      this.$router.push('/')
     },
   },
 }
