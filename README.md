@@ -101,5 +101,4 @@ o usuário básico com permissão de médico é:
 login: admin
 cpf: 000.000.000-00
 senha: 1234
-=======
 ```
