@@ -85,7 +85,9 @@ pnpm i # Caso não possua pnpm instalado, primeiro utilize: npm install -g pnpm
 
 ### Development
 
-Use o comando e a pagina estará em http://localhost:4000 | o json-server em http://localhost:3000
+- Use o comando e a pagina estará em http://localhost:4000
+- o json-server em http://localhost:3000/
+- os usuários se dividem em http://localhost:3000/patients e http://localhost:3000/staffs
 
 ```bash
 pnpm start
@@ -93,7 +95,8 @@ pnpm start
 
 ### Login
 
-criei um usuário admin padrao
+o usuário básico com permissão de médico é:
+
 ```bash
 login: admin
 cpf: 000.000.000-00
