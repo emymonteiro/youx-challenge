@@ -1,193 +1,92 @@
-<p align='center'>
-  <img src='https://user-images.githubusercontent.com/11247099/111864893-a457fd00-899e-11eb-9f05-f4b88987541d.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
-</p>
+
 
 <p align='center'>
-Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br>
-</p>
-
-<br>
-
-<p align='center'>
-<a href="https://vitesse.netlify.app/">Live Demo</a>
+<b>YouX Challenge</b>
 </p>
 
 <br>
 
-<p align='center'>
-<b>English</b> | <a href="https://github.com/antfu/vitesse/blob/main/README.zh-CN.md">简体中文</a>
-<!-- Contributors: Thanks for geting interested, however we DON'T accept new transitions to the README, thanks. -->
-</p>
+## Frameworks
+
+- 📑 [Vitesse](https://github.com/antfu/vitesse) 
+
+- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite)
+
+- 🎨 [Windi CSS](https://github.com/windicss/windicss)
 
 <br>
 
-## Features
+## Dependencias
 
-- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
+- 💻 [json-server](https://github.com/typicode/json-server)
 
-- 🗂 [File based routing](./src/pages)
+- 💾 [axios](https://github.com/axios/axios)
 
-- 📦 [Components auto importing](./src/components)
+- 🔒 [crypto-js](https://github.com/brix/crypto-js)
 
-- 🍍 [State Management via Pinia](https://pinia.esm.dev/)
+- 📁 [concurrently](https://github.com/open-cli-tools/concurrently)
 
-- 📑 [Layout system](./src/layouts)
-
-- 📲 [PWA](https://github.com/antfu/vite-plugin-pwa)
-
-- 🎨 [Windi CSS](https://github.com/windicss/windicss) - next generation utility-first CSS framework
-
-- 😃 [Use icons from any icon sets, with no compromise](https://github.com/antfu/unplugin-icons)
-
-- 🌍 [I18n ready](./locales)
-
-- 🗒 [Markdown Support](https://github.com/antfu/vite-plugin-md)
-
-- 🔥 Use the [new `<script setup>` syntax](https://github.com/vuejs/rfcs/pull/227)
-
-- 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
-
-- 🖨 Server-side generation (SSG) via [vite-ssg](https://github.com/antfu/vite-ssg)
-
-- 🦔 Critical CSS via [critters](https://github.com/GoogleChromeLabs/critters)
-
-- 🦾 TypeScript, of course
-
-- ⚙️ Unit Testing with [Vitest](https://github.com/vitest-dev/vitest), E2E Testing with [Cypress](https://cypress.io/) on [GitHub Actions](https://github.com/features/actions)
-
-- ☁️ Deploy on Netlify, zero-config
+- 🎭 [maska](https://github.com/beholdr/maska)
 
 <br>
 
-## Pre-packed
+## Anotações
 
-### UI Frameworks
+### Desenvolvimento
 
-- [Windi CSS](https://github.com/windicss/windicss) (On-demand [TailwindCSS](https://tailwindcss.com/)) - lighter and faster, with a bunch of additional features!
-  - [Windi CSS Typography](https://windicss.org/plugins/official/typography.html)
+- O projeto foi iniciado a partir de um template chamado "Vitesse", que engloba Vite, Vue, e diversas outras libs, e em seguida removido algumas features e conteúdos prontos.
 
-### Icons
+- A ideia inicial que tive para o inicio do desenvolvimento desse projeto, foi pensando em armazenar os usuários num json-server, e partir de lá, fazer as checagens.
 
-- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
-- [`unplugin-icons`](https://github.com/antfu/unplugin-icons) - icons as Vue components
+- O primeiro dia teve como foco o desenvolvimento da interface, utilizando o Windi CSS para a customização, peguei algumas refêrencias na internet, mas no fim, acabei tentando deixar de uma forma com que parecesse oficial da YouX
 
-### Plugins
+- Adicionei uma ferramenta chamada Mask para transformar os inputs de CPF e campos de altura, peso, de forma que ficassem limitadas para o usuário
 
-- [Vue Router](https://github.com/vuejs/vue-router)
-  - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
-  - [`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) - layouts for pages
-- [Pinia](https://pinia.esm.dev) - Intuitive, type safe, light and flexible Store for Vue using the composition api
-- [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - components auto import
-- [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use Vue Composition API and others without importing
-- [`vite-plugin-pwa`](https://github.com/antfu/vite-plugin-pwa) - PWA
-- [`vite-plugin-windicss`](https://github.com/antfu/vite-plugin-windicss) - Windi CSS Integration
-- [`vite-plugin-md`](https://github.com/antfu/vite-plugin-md) - Markdown as components / components in Markdown
-  - [`markdown-it-prism`](https://github.com/jGleitz/markdown-it-prism) - [Prism](https://prismjs.com/) for syntax highlighting
-  - [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) - customizable Prism.js theme using CSS variables
-- [Vue I18n](https://github.com/intlify/vue-i18n-next) - Internationalization
-  - [`vite-plugin-vue-i18n`](https://github.com/intlify/vite-plugin-vue-i18n) - Vite plugin for Vue I18n
-- [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
-- [`@vueuse/head`](https://github.com/vueuse/head) - manipulate document head reactively
+- Em seguida comecei a adicionar funcionalidades visuais, como verificar os campos em branco , checar se a quantidade de caracteres confere à de um CPF real, etc...
 
-### Coding Style
+- Adicionei o json-server para criar um pseudo banco de dados e deixei pré-desenvolvido o sistema de registros.
 
-- Use Composition API with [`<script setup>` SFC syntax](https://github.com/vuejs/rfcs/pull/227)
-- [ESLint](https://eslint.org/) with [@antfu/eslint-config](https://github.com/antfu/eslint-config), single quotes, no semi.
+- Ao criar o login, me deparei com um problema, não existia uma autenticação real para o json-server... Procurei na internet e achei um integrador, mas não encontrei nada a respeito de como desenvolver utilizando o vue.
 
-### Dev tools
+- Nesse ponto comecei a ter alguns problemas com o Vitesse, pois havia algumas coisas prontas, como o Pinia, que é um sistema para Stores como o Vuex, mas eu nunca tinha utilizado nada parecido até agora, o servidor não autenticava, e fiquei presa, pensei em recomeçar o projeto, mas já estava muito longe pra isso.
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vitest](https://github.com/vitest-dev/vitest) - Unit testing powered by Vite
-- [Cypress](https://cypress.io/) - E2E testing
-- [pnpm](https://pnpm.js.org/) - fast, disk space efficient package manager
-- [`vite-ssg`](https://github.com/antfu/vite-ssg) - Server-side generation
-  - [critters](https://github.com/GoogleChromeLabs/critters) - Critical CSS
-- [Netlify](https://www.netlify.com/) - zero-config deployment
-- [VS Code Extensions](./.vscode/extensions.json)
-  - [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite) - Fire up Vite server automatically
-  - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - Vue 3 `<script setup>` IDE support
-  - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Icon inline display and autocomplete
-  - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally) - All in one i18n support
-  - [Windi CSS Intellisense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - IDE support for Windi CSS
-  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- Pensei em outra estratégia, que era armazenar o usuário no localStorage, o que não é tão seguro, mas acabou resolvendo todos os meus problemas com login, e autenticação de páginas. Depois disso, adicionei o Axios para fazer GET e POST no meu json-server e utilizei o localStorage para fazer a verificação de login do usuário. O mais grave problema dessa situação é que não existe um sistema de segurança pra autenticação do meu json-server, e isso significa que qualquer aplicativo externo com POST conseguiria adicionar um novo usuário com permissão de medicos.
 
-## Variations
+-  Depois que quase tudo estava resolvido, decidi buscar algum método para criptografar o CPF e a Senha, procurei algumas ferramentas, e muitas foram incompatíveis com o Vue 3. Até que encontrei a crypto-js , que conseguiu rodar no meu projeto sem erros, então implementei, um sha256 para o CPF e o mesmo para a senha , porém com a soma entre nome e senha. ( aqui passou uma coisa despercebida, o crypto-js começou a me impedir de buildar o projeto, passei horas procurando alguma solução, não consegui nada, e eu não tinha tempo para trocar a criptografia denovo ).
 
-As this template is strongly opinionated, the following provides a curated list for community-maintained variations with different preferences and feature sets. Check them out as well. PR to add yours is also welcome!
+- Com tudo criado, faltava apenas a parte de mostrar a quantidade de pacientes registrados em cada região, tentei utilizar a API , mas aparentemente ela está obsoleta em vue 3, e sinceramente a escrita do teste não ficou 100% clara pra mim a respeito desse item; existe um link , mas aparentemente está quebrado, e o texto diz algo sobre geometria, vendo isso eu pensei que seria interessante encontrar a geometria de cada estado e criar um mapa do Brasil com cliques que mostrariam os resultados da api a cada clique.
 
-###### Official
+- Por ultimo, eu corrigi os ultimos probleminhas, e começei a organizar o código com os componentes em seus devidos lugares, e tentei comentar tudo o que achei útil.
 
-- [vitesse-lite](https://github.com/antfu/vitesse-lite) - Lightweight version of Vitesse
-- [vitesse-nuxt3](https://github.com/antfu/vitesse-nuxt3) - Vitesse for Nuxt 3
-- [vitesse-nuxt-bridge](https://github.com/antfu/vitesse-nuxt-bridge) - Vitesse for Nuxt 2 with Bridge
-- [vitesse-webext](https://github.com/antfu/vitesse-webext) - WebExtension Vite starter template
+<br>
 
-###### Community
+### Conclusão
 
-- [vitesse-addons](https://github.com/JohnCampionJr/vitesse-addons) by [@johncampionjr](https://github.com/johncampionjr) - additional options for integrations, including [Prettier](https://prettier.io) and [Storybook](https://storybook.js.org)
-- [vitesse-ssr-template](https://github.com/frandiox/vitesse-ssr-template) by [@frandiox](https://github.com/frandiox) - Vitesse with SSR
-- [vitespa](https://github.com/ctholho/vitespa) by [@ctholho](https://github.com/ctholho) - Like Vitesse but without SSG/SSR
-- [vitailse](https://github.com/zynth17/vitailse) by [@zynth17](https://github.com/zynth17) - Like Vitesse but with TailwindCSS
-- [vitesse-modernized-chrome-ext](https://github.com/xiaoluoboding/vitesse-modernized-chrome-ext) by [@xiaoluoboding](https://github.com/xiaoluoboding) - ⚡️ Modernized Chrome Extension Manifest V3 Vite Starter Template
-- [vitesse-stackter-clean-architect](https://github.com/shamscorner/vitesse-stackter-clean-architect) by [@shamscorner](https://github.com/shamscorner) - A modular clean architecture pattern in vitesse template
-- [vitesse-enterprise](https://github.com/FranciscoKloganB/vitesse-enterprise) by [@FranciscoKloganB](https://github.com/FranciscoKloganB) - Consistent coding styles regardless of team-size.
+- Por conta do problema com o crypto-js não estou conseguindo buildar, e como o problema surgiu, e eu só percebi no final, achei que não seria tão legal , perder muito tempo me preocupando com isso, pois poderia me atrasar muito e eu não conseguir terminar o projeto. Dado esse problema , eu não consegui hospedar o site para ter alguma noção inicial, porém o servidor iria travar pois ele depende de um "backend" que é o json-server para efetuar o login.
 
-## Try it now!
+<br>
 
-> Vitesse requires Node >=14
+## Instalação
 
-### GitHub Template
+> Requer Node >=14
 
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse/generate).
+### Instalação simples
 
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
+Você pode instalar clonando esse repositorio como abaixo
 
 ```bash
-npx degit antfu/vitesse my-vitesse-app
-cd my-vitesse-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+git clone https://github.com/emymonteiro/youx-challenge
+cd youx-challenge
+pnpm i # Caso não possua pnpm instalado, primeiro utilize: npm install -g pnpm
 ```
 
-## Checklist
 
-When you use this template, try follow the checklist to update your info properly
-
-- [ ] Change the author name in `LICENSE`
-- [ ] Change the title in `App.vue`
-- [ ] Change the favicon in `public`
-- [ ] Remove the `.github` folder which contains the funding info
-- [ ] Clean up the READMEs and remove routes
-
-And, enjoy :)
-
-## Usage
+## Como usar
 
 ### Development
 
-Just run and visit http://localhost:3333
+Use o comando e a pagina estará em http://localhost:4000 | o json-server em http://localhost:3000
 
 ```bash
-pnpm dev
+pnpm start
 ```
-
-### Build
-
-To build the App, run
-
-```bash
-pnpm build
-```
-
-And you will see the generated file in `dist` that ready to be served.
-
-### Deploy on Netlify
-
-Go to [Netlify](https://app.netlify.com/start) and select your clone, `OK` along the way, and your App will be live in a minute.
-
-## Why
-
-I have created several Vite apps recently. Setting the configs up is kinda the bottleneck for me to make the ideas simply come true within a very short time.
-
-So I made this starter template for myself to create apps more easily, along with some good practices that I have learned from making those apps. It's strongly opinionated, but feel free to tweak it or even maintains your own forks. [(see community maintained variation forks)](#variations)
