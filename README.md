@@ -90,3 +90,12 @@ Use o comando e a pagina estará em http://localhost:4000 | o json-server em htt
 ```bash
 pnpm start
 ```
+
+### Login
+
+criei um usuário admin padrao
+```bash
+login: admin
+cpf: 000.000.000-00
+senha: 1234
+```
