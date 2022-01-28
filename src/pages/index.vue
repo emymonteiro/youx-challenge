@@ -3,10 +3,13 @@
 <template>
   <div class="absolute bg-white shadow flex justify-between w-[60%] rounded text-gray-600">
     <div class="flex py-10 flex-col items-center justify-center w-full ">
+      <!-- Componente de mapa do Brasil em SVG -->
       <Map @update-map="updateMap" />
+      <!-- Botao para resetar filtro de mapas -->
       <button class="justify-self-start hover:opacity-70 text-white self-start mb-5 ml-5 bg-green-600 py-1 rounded px-5" @click="resetMap()">
         Ver Todos
       </button>
+      <!-- Filtro de pacientes por região -->
       <div class="w-full text-left pt-5 border-t">
         <div v-if="patients" class="ml-5">
           <p>Estado: <span class="font-bold">{{ selected.sigla }}</span></p>
@@ -15,6 +18,7 @@
       </div>
     </div>
     <div class="flex flex-col pt-10 space-y-3 shadow items-center justify-start w-100 ">
+      <!-- Componente de botões de cadastro de pacientes e enfermeiros -->
       <RegisterButtons :is-doctor="isDoctor" />
     </div>
   </div>
@@ -30,12 +34,15 @@ export default {
   components: { RegisterButtons },
   data() {
     return {
+      /* obj com informações de pacientes por regiões */
       selected: {
         sigla: 'Todos',
         amount: 0,
         patients: {}, // Futura implementação da listagem dos pacientes através da API
       },
+      /* store para api de pacientes */
       patients: null,
+      /* Verifica se o user é medico ou não e envia para o componente RegisterHeader */
       isDoctor: false,
     }
   },

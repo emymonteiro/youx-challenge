@@ -1,3 +1,4 @@
+<!-- Componente contendo botão de retorno e titulo dos componentes de Login, Register, Nurse -->
 <template>
   <div class="mt-10 flex flex-col w-full">
     <router-link v-if="getData.backButton" to="/" class="self-start hover:opacity-70 cursor-pointer flex items-center ml-15 text-gray-400">

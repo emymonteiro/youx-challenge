@@ -1,6 +1,8 @@
 <template>
+  <!-- HEADER BAR -->
   <main class="flex bg-white items-center shadow p-6 text-youx justify-between">
     <div class="cursor-pointer ml-[20%] flex flex-col" @click="goHome()">
+      <!-- LOGO YOUX -->
       <div class="tipFont relative flex items-center whitespace-nowrap">
         <h1 class=" whitespace-nowrap text-2.4em font-bold">
           YOU
@@ -15,7 +17,9 @@
           GROUP
         </p>
       </div>
+      <!-- LOGO YOUX -->
     </div>
+    <!-- BOTOES DE LOGOUT INFORMACOES DE NOME E CARGO -->
     <div v-if="user" class="flex items-center mr-[10%] font-bold">
       <p class="text-gray-500">
         Nome: <span class="text-youx ml-5 capitalize">{{ user.name }}</span>
@@ -37,7 +41,7 @@ export default {
       user: undefined,
     }
   },
-  watch: {
+  watch: { /* Escuta a mudanças nas rotas e verifica se o usuario está logado: remove ou adiciona nome e botão de logout */
     $route(to, from) {
       const user = JSON.parse(localStorage.getItem('user-info'))
       if (user) {
@@ -51,7 +55,7 @@ export default {
       }
     },
   },
-  mounted() {
+  mounted() { /* Ao montar a pagina, verifica se o usuario está logado: remove ou adiciona nome e botão de logout */
     const user = JSON.parse(localStorage.getItem('user-info'))
     if (user) {
       this.user = {
@@ -61,11 +65,11 @@ export default {
     }
   },
   methods: {
-    userLeave() {
+    userLeave() { /* Função de disconect do user, limpa o storage, e redireciona para o login */
       localStorage.clear()
       this.$router.push('/login')
     },
-    goHome() {
+    goHome() { /* Link para pagina inicial caso clique em YOUX GROUP no header */
       this.$router.push('/')
     },
   },

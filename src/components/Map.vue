@@ -1,5 +1,6 @@
 <template>
   <div class="pb-5">
+    <!-- MAPA DO BRASIL EM SVG -> RECOMENDAVEL GUARDAR ESSA ABA -->
     <svg id="svg-map" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="450px" height="460px" viewBox="0 0 450 460" enable-background="new 0 0 450 460" xml:space="preserve">
       <g>
         <a @click="updateMap('TO')">
@@ -387,6 +388,7 @@
 <script>
 export default {
   methods: {
+    /* Todas as regiões ativam esse evento com o nome delas, o evento emite a região pro index */
     updateMap(local) {
       this.$emit('update-map', local)
     },
@@ -394,7 +396,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped> /* Estilização de cores para o mapa do Brasil */
     #svg-map path { fill:#0094d9 }
     #svg-map text { fill:#fff; font:12px Arial-BoldMT, sans-serif; cursor:pointer }
     #svg-map a{ text-decoration:none }

@@ -1,3 +1,4 @@
+<!-- Componente de botões para redirecionamento para registro de pacientes ou enfermeiros -->
 <template>
   <router-link
     to="/register"

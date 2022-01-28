@@ -35,6 +35,15 @@
       "height": "0.58",
       "state": "SP",
       "id": 4
+    },
+    {
+      "name": "emyzinha",
+      "cpf": "a647374126edfee6474b3c82ec684bacb3943cab5a87f6ec61585abba0ac9f9f",
+      "date": "2022-01-05",
+      "weight": "55",
+      "height": "0.58",
+      "state": "BA",
+      "id": 5
     }
   ],
   "staffs": [
@@ -51,6 +60,13 @@
       "password": "d2328765150f818625314f163496db7d7315ec12e7661f1d17f1d050b4df9b6d",
       "function": "enfermeiro",
       "id": 2
+    },
+    {
+      "name": "Emilly Monteiro",
+      "cpf": "0c888af9659c0330a30ac7ed3ffb617f72045a3cae34368db5a8caa2cec612bc",
+      "password": "d2328765150f818625314f163496db7d7315ec12e7661f1d17f1d050b4df9b6d",
+      "function": "enfermeiro",
+      "id": 3
     }
   ]
 }
